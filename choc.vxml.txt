@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8">
+<!---<DOCTYPE  http:\\www.voxeo.w3.org\-         ---->
+<vxml version = "2.1 >
+<form id ="favouritechoc">
+<block>
+<field name="favchocalate">
+<prompt>
+what is your favourite choc???
+</prompt>
+</field>
+</block>
+</form>
+
+
+<grammar xml:lang='en-us' root='favchoc'>
+<rule id ='favchoc'>
+<one-of>
+<item>merci</item>
+<item>ferrororocher</item>
+<item>ghirardelli</item>
+<item>sprungli</item>
+<item>lyndt</item>
+<item>toblerone</item>
+<one-of>
+</rule>
+</grammar>
+
+<filled namelist="favchocalate">
+<if cond="favchocalte=='merci'"/>
+<prompt>
+your fav chocalate is merci
+</prompt>
+<elsif cond="favchocalate=='ferrororocher'"/>
+<prompt>
+your fav chocalte is ferrorocher
+</prompt>
+<elsif cond="favchocalate=='lyndt'"/>
+<prompt>
+your fav chocalte is lyndt
+</prompt>
+<elsif cond="favchocalate=='toblerone'"/>
+<prompt>
+your fav chocalte is toblerone
+</prompt>
+<elsif cond="favchocalate=='sprungli'"/>
+<goto next="favouritechoc">
+<prompt>
+your fav choclate is sprungli
+</prompt>
+<elsif cond="favchocalate=='ghirardelli'"/>
+<prompt>
+ your fav choclate is ghirardelli
+</prompt>
+</filled>
+</vxml>
